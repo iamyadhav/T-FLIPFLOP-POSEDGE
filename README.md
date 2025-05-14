@@ -1,5 +1,7 @@
 # T-FLIPFLOP-POSEDGE
-
+## NAME : DHANUSH P
+## REG NO : 21222320042
+## DATE :
 **AIM:**
 
 To implement  T flipflop using verilog and validating their functionality using their functional tables
@@ -32,11 +34,29 @@ From the above characteristic table, we can directly write the next state equati
 
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+
+```
+module exp9T(T,clk,Q,Qbar);
+input T,clk;
+output reg Q;
+output reg Qbar;
+initial Q=0;
+initial Qbar=1;
+always @(posedge clk)
+begin
+Q=(T&(~Q))|((~T)&Q);
+Qbar=~Q;
+end
+endmodule
+```
 
 **RTL LOGIC FOR FLIPFLOPS**
 
+![Screenshot 2025-05-02 111822](https://github.com/user-attachments/assets/99035d0b-ad6d-4b91-beab-3ebd05162622)
+
 **TIMING DIGRAMS FOR FLIP FLOPS**
+![Screenshot 2025-05-02 112135](https://github.com/user-attachments/assets/0ceaa5b3-1877-4de0-917c-86c66392fb09)
+
 
 **RESULTS**
+To implement  T flipflop using verilog and validating their functionality using their functional tables was successful 
